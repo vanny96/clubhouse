@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       log_in user
       params[:session][:remember_me] == "1" ? remember(user) : forget
       flash[:success] = "Logged in as #{user.name}"
-      redirect_to user
+      redirect_to root_path
     else
       flash.now[:error] = "Incorrect email or password"
       render :new
@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to signin_path
+    redirect_to root_path
   end
 end

@@ -1,5 +1,7 @@
 <div class="header">
+  <%= link_to "Club", root_path%>
   <% if logged_in? %>
+    <%= link_to "Profile", current_user %>
     <%= link_to "Log Out", logout_path, method: 'DELETE'%>
   <% else %>
     <%= link_to "Log in", signin_path %>

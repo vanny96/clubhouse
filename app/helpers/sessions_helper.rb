@@ -38,4 +38,12 @@ module SessionsHelper
     cookies.delete :user_id
     cookies.delete :remember_token
   end
+
+  def redirect_back_or path
+    if session[:go_to]
+      redirect_to session[:go_to]
+    elsif
+      redirect_to path
+    end
+  end
 end
