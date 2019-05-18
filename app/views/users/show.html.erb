@@ -1,6 +1,7 @@
 <h1><%= @user.name %></h1>
 <h3>List of posts</h3>
 <ul>
+  <%= render @user.posts %>
 </ul>
 <p>Are you this user? <p>
 <%= @user == current_user ? "Yes" : "Nope"%>
