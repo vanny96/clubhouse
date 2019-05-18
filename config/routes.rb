@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :users, except: [:index, :new, :create]
-  resources :posts, except: [:show]
+  resources :users, only: [:show]
+  resources :posts, except: [:show, :edit, :update, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
