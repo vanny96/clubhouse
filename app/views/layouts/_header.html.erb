@@ -1,0 +1,7 @@
+<div class="header">
+  <% if logged_in? %>
+    <%= link_to "Log Out", logout_path, method: 'DELETE'%>
+  <% else %>
+    <%= link_to "Log in", signin_path %>
+  <%end%>
+</div>

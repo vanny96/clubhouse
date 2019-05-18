@@ -10,6 +10,9 @@
   </head>
 
   <body>
+  <header>
+    <%= render partial: 'layouts/header'%>
+  </header>
   <%flash.each do |type, message|%>
     <%= message %><br>
   <%end%>
