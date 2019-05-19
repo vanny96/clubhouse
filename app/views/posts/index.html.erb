@@ -3,5 +3,5 @@
   <%= link_to "New Post", new_post_path%>
 <% end %>
 <ul>
-  <%= render @posts%>
+  <%= render partial: 'post', collection: @posts, locals: {user: @current_user}%>
 </ul>
